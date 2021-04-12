@@ -1,0 +1,109 @@
+@font-face{
+	font-family: 'NeueMontreal';
+	src: url('montreal/NeueMontreal-Bold.woff') format('woff'),
+		url('NeueMontreal-Bold.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face{
+    font-family: 'EditorialNew';
+    src: url('editorial/EditorialNew-Italic.woff') format('woff'),
+        url('EditorialNew-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    background-color: #C4C4C4;
+    cursor: url('images/bigmouse.png'), auto;
+}
+img{
+    border: .3rem solid  black;
+}
+.filter{
+    padding: 1rem;
+    font-family: NeueMontreal;
+    font-size: 6em;
+}
+h1{
+    padding: 1rem;
+    font-family: NeueMontreal;
+    cursor: url('images/bigmouse.png'), auto;
+    font-family: NeueMontreal;
+    font-size: 6em;
+    margin-top: -10px;
+    line-height: .98em;
+}
+h2{
+    font-family: EditorialNew;
+    font-size: 5em;
+    width: 80%;
+}
+.sneaker-container{
+    padding: 1rem;
+    /* border: 1px solid black; */
+    display: grid;
+    /* grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr; */
+}
+.sneaker-image{
+    width: 70%;
+    height: auto;
+    display: none;
+}
+.sneaker-image.active{
+    display: block;
+}
+.sneaker-description{
+    display: none;
+}
+.sneaker-description.active{
+    display: block;
+}
+.sneaker-designer{
+    display: none;
+}
+.sneaker-designer.active{
+    display: block;
+}
+.sneaker-retail{
+    display: none;
+}
+.sneaker-retail.active{
+    display: block;
+}
+.sneaker-resale{
+    display: none;
+}
+.sneaker-resale.active{
+    display: block;
+}
+.sneaker-audience{
+    display: none;
+}
+.sneaker-audience.active{
+    display: block;
+}
+.sneaker-date{
+    display: none;
+}
+.sneaker-date.active{
+    display: block;
+}
+.sneaker-drop{
+    display: none;
+}
+.sneaker-drop.active{
+    display: block;
+}
+.sneaker-style{
+    display: none;
+}
+.sneaker-style.active{
+    display: block;
+}
+.sneaker-color{
+    display: none;
+}
+.sneaker-color.active{
+    display: block;
+}
