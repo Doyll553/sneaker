@@ -12,33 +12,108 @@
     font-weight: normal;
     font-style: normal;
 }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+  }
+.dropdownone:hover .dropdown-content {
+      display: block;
+}
+.dropdowntwo:hover .dropdown-content {
+    display: block;
+}
+.dropdownthree:hover .dropdown-content {
+    display: block;
+}
+.dropdownfour:hover .dropdown-content {
+    display: block;
+}
+.dropdownfive:hover .dropdown-content {
+    display: block;
+}
+
+
+/* MAYA ON MONDAY */
+.secondcontainer { 
+   display: flex;
+   /* flex-wrap: wrap; */
+   justify-content: left;
+   padding-left: 1rem;
+    
+}
+
+.box {
+    justify-content: center;
+    border-style: solid;
+    padding: .4em;
+    font-size: 3em;
+    background-color: white;
+    margin-bottom: .1em;
+    margin-right: .3em;
+}
+
+/* 
+.box5 {
+    display: none;
+}
+.box6 {
+    display: none;
+}
+.box7 {
+    display: none;
+}
+.box8 {
+    display: none;
+} */
+/* MAYA ON MONDAY */
+
+
+
+
 body{
     background-color: #C4C4C4;
     cursor: url('images/bigmouse.png'), auto;
 }
+.title{
+    margin-top: 15px;
+    font-size: 7.5em;
+}
 img{
+    margin-left: 3%;
     border: .3rem solid  black;
+    margin-bottom: 50px;
+    margin-top: -50px;
 }
 .filter{
-    padding: 1rem;
     font-family: NeueMontreal;
-    font-size: 6em;
+    justify-content: center;
+    font-size: 1.2em;
+    margin-top: -70px;
+    margin-bottom: 80px;
+    /* padding: 1rem; */
+    
 }
 h1{
-    padding: 1rem;
+    margin-top: -100px;
     font-family: NeueMontreal;
     cursor: url('images/bigmouse.png'), auto;
     font-family: NeueMontreal;
-    font-size: 6em;
-    margin-top: -10px;
+    font-size: 5em;
+    padding: 1rem;
     line-height: .98em;
 }
 h2{
     font-family: EditorialNew;
-    font-size: 5em;
+    font-size: 4em;
+    line-height: 1.3em;
     width: 80%;
+    margin-top: -40px;
+    margin-left: 3%;
+
 }
 .sneaker-container{
+
     padding: 1rem;
     /* border: 1px solid black; */
     display: grid;
@@ -48,11 +123,20 @@ h2{
 .sneaker-image{
     width: 70%;
     height: auto;
-    display: none;
+    display: none; 
 }
 .sneaker-image.active{
     display: block;
 }
+/* .sneaker-image:hover{
+    opacity: 1;
+} */
+.man:hover + .sneaker-image{
+    display: block;
+   }
+.woman:hover + .sneaker-image{
+    display: block;
+   }
 .sneaker-description{
     display: none;
 }
@@ -107,3 +191,25 @@ h2{
 .sneaker-color.active{
     display: block;
 }
+.man:hover{
+    color: #0070D8;
+}
+.woman:hover{
+    color: #FF8080;
+}
+.sneaker-title:hover{
+    font-family: EditorialNew;
+}
+.label{
+    font-family: NeueMontreal;
+}
+/* .man:hover + .sneaker-image{
+    display: block;
+   }
+.woman:hover + .sneaker-image{
+    display: block;
+   } */
+   /*  
+   //!important
+
+   //Bohle000@newschool.edu

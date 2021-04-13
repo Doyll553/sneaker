@@ -11,9 +11,8 @@ var base = new Airtable({ apiKey: "keyDvpfoibL19TD8A" }).base(
 );
 
 //get the "sneakers" table from the base, select ALL the records, and specify the functions that will receive the data
-base("sneakers").select({
-    view: "Grid view"
-  }).eachPage(gotPageOfSneakers, gotAllSneakers);
+base("sneakers").select({sort:[{field: "sneaker_name", direction: "asc"}]
+}).eachPage(gotPageOfSneakers, gotAllSneakers);
 
 // an empty array to hold our sneaker data
 const sneakers = [];
@@ -89,65 +88,114 @@ function showSneakers() {
 
     var sneakerDesigner = document.createElement("h2");
     sneakerDesigner.classList.add("sneaker-designer");
-    sneakerDesigner.innerText = sneaker.fields.designer;
+    sneakerDesigner.innerText = "Design by a: " + sneaker.fields.designer;
     sneakerContainer.append(sneakerDesigner);
+    sneakerContainer.classList.add(sneaker.fields.designer);
 
     //add description
 
     var sneakerDescription = document.createElement("h2");
     sneakerDescription.classList.add("sneaker-description");
-    sneakerDescription.innerText = sneaker.fields.description;
+    sneakerDescription.innerText = "Description: " + sneaker.fields.description;
     sneakerContainer.append(sneakerDescription);
+
+    //add event listener
+
+    var filterDesign = document.querySelector('.man');
+    filterDesign.addEventListener("click", function(){
+        if (sneakerContainer.classList.contains("man")) {
+          sneakerContainer.style.display = "block";
+        } else {
+          sneakerContainer.style.display = "none";
+        }
+    })
+
+    var filterDesign = document.querySelector('.woman');
+    filterDesign.addEventListener("click", function(){
+        if (sneakerContainer.classList.contains("woman")) {
+          sneakerContainer.style.display = "block";
+        } else {
+          sneakerContainer.style.display = "none";
+        }
+    })
 
     //add retail price
 
         var sneakerRetail = document.createElement("h2");
         sneakerRetail.classList.add("sneaker-retail");
-        sneakerRetail.innerText = sneaker.fields.retail_price;
+        var price = sneaker.fields.retail_price;
+        sneakerRetail.innerText = "Retail Price (USD): " + sneaker.fields.retail_price;
         sneakerContainer.append(sneakerRetail);
 
-    //add retail price
+        // var filterRetail = document.querySelector('.retail');
+        // filterRetail.addEventListener("click", function(){
+        //   var 
+        //   sneaker.fields.retail_price.sort((a, b) => a - b);
+        // })
+
+        // sneaker.fields.retail_price.sort((a, b) => a - b);
+
+    //add resale price
 
         var sneakerResale = document.createElement("h2");
         sneakerResale.classList.add("sneaker-resale");
-        sneakerResale.innerText = sneaker.fields.current_resell_price;
+        sneakerResale.innerText = "Current Resale Price (USD): " + sneaker.fields.current_resell_price;
         sneakerContainer.append(sneakerResale);
 
     //add target audience
 
     var sneakerAudience = document.createElement("h2");
     sneakerAudience.classList.add("sneaker-audience");
-    sneakerAudience.innerText = sneaker.fields.marketed_to;
+    sneakerAudience.innerText = "Target Audience: " + sneaker.fields.marketed_to;
     sneakerContainer.append(sneakerAudience);
 
     //add release date
 
     var sneakerDate = document.createElement("h2");
     sneakerDate.classList.add("sneaker-date");
-    sneakerDate.innerText = sneaker.fields.release_date;
+    sneakerDate.innerText = "Release Date: " + sneaker.fields.release_date;
     sneakerContainer.append(sneakerDate);
 
     //add drop count
 
     var sneakerDrop = document.createElement("h2");
     sneakerDrop.classList.add("sneaker-drop");
-    sneakerDrop.innerText = sneaker.fields.drop_count;
+    sneakerDrop.innerText = "Drop Count: " + sneaker.fields.drop_count;
     sneakerContainer.append(sneakerDrop);
 
     //add style number
 
     var sneakerStyle = document.createElement("h2");
     sneakerStyle.classList.add("sneaker-style");
-    sneakerStyle.innerText = sneaker.fields.style;
+    sneakerStyle.innerText = "Style Number: " + sneaker.fields.style;
     sneakerContainer.append(sneakerStyle);
 
     //add color
 
     var sneakerColor = document.createElement("h2");
     sneakerColor.classList.add("sneaker-color");
-    sneakerColor.innerText = sneaker.fields.color_way;
+    sneakerColor.innerText = "Colorway: "+ sneaker.fields.color_way;
     sneakerContainer.append(sneakerColor);
 
+    
+
+//     var sortOldtoNew = document.getElementByClass('.old_to_new');
+// sortOldtoNew.addEventListener("click", function(){
+//     // Clear the container div (remove all the previous elements)
+//     const sneakerContainer = document.querySelector("#container");
+//     sneakerContainer.innerHTML = "";
+//     // Sort the songs array according to rating from high to low
+//     sortOldtoNew();
+//     showData();
+// });
+
+
+// function sortOldtoNew(){
+//   sneakers.sort(function(a, b) {
+//     // For any two songs in the songs array, compare them by their rating number
+//     return b.fields.release_date - a.fields.release_date;
+//   });
+// }
     //  //add volatility
 
     //  var sneakerVolatile = document.createElement("h2");
@@ -170,6 +218,26 @@ function showSneakers() {
             sneakerStyle.classList.toggle("active");
             sneakerColor.classList.toggle("active");
         })
+
+
+        // //ON HOVER drop down sort thing MAYA ON MONDAY
+        // var designer = document.querySelector(".designer");
+        // var price = document.querySelector(".price");
+        // var releaseDate = document.querySelector(".release");
+        // var reset = document.querySelector(".reset");
+        // var gender = document.querySelector(".gender");
+        // var first = document.querySelector(".first");
+
+        // designer.addEventListener("mouseover", function(){
+        //     gender.style.display = "block";
+
+        // })
+
+        // first.addEventListener("mouseleave", function(){
+        //   gender.style.display = "none";
+        // })
+
+      //MAYA ON MONDAY
 
         
     // var sneakerDesigner = document.createElement("p");
