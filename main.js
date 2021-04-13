@@ -88,7 +88,7 @@ function showSneakers() {
 
     var sneakerDesigner = document.createElement("h2");
     sneakerDesigner.classList.add("sneaker-designer");
-    sneakerDesigner.innerText = "Design by a: " + sneaker.fields.designer;
+    sneakerDesigner.innerText = "Designed by a: " + sneaker.fields.designer;
     sneakerContainer.append(sneakerDesigner);
     sneakerContainer.classList.add(sneaker.fields.designer);
 
