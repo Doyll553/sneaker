@@ -203,6 +203,129 @@ h2{
 .label{
     font-family: NeueMontreal;
 }
+@media screen and (max-width: 768px) {
+h1{
+    font-size: 23px;
+    padding-top: 92px;
+    margin-bottom: -25px;
+    
+}
+h2{
+    font-family: EditorialNew;
+    font-size: 15px;
+    line-height: 25px;
+    width: 80%;
+    margin-left: 3%;
+
+}
+.filter{
+    font-family: NeueMontreal;
+    justify-content: left;
+    font-size: 5px;
+    /* margin-top: -110px; */
+    /* margin-bottom: 80px; */
+    /* padding: 1rem; */
+    
+}
+.sneaker-container{
+
+    /* padding: 1rem; */
+    border: 3px solid black;
+    background-color: white;
+    /* display: grid; */
+    margin-top: 5px;
+ 
+    /* grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr; */
+}
+.title{
+    font-size: 43px;
+    text-align: left;
+    margin-top: -90px;;
+    max-width: 90%;
+}
+img{
+    margin-top: 10px;;
+}
+.sneaker-description{
+    display: none;
+    margin-top: -10px;
+}
+.sneaker-description.active{
+    display: block;
+}
+.sneaker-designer{
+    display: none;
+}
+.sneaker-designer.active{
+    display: block;
+}
+.sneaker-retail{
+    display: none;
+    margin-top: -10px;
+}
+.sneaker-retail.active{
+    display: block;
+    margin-top: -10px;
+}
+.sneaker-resale{
+    display: none;
+    margin-top: -10px;
+}
+.sneaker-resale.active{
+    display: block;
+    margin-top: -10px;
+}
+.sneaker-audience{
+    display: none;
+    margin-top: -10px;
+}
+.sneaker-audience.active{
+    display: block;
+    margin-top: -10px;
+}
+.sneaker-date{
+    display: none;
+    margin-top: -10px;
+}
+.sneaker-date.active{
+    display: block;
+    margin-top: -10px;
+}
+.sneaker-drop{
+    display: none;
+    margin-top: -10px;
+}
+.sneaker-drop.active{
+    display: block;
+    margin-top: -10px;
+}
+.sneaker-style{
+    display: none;
+    margin-top: -10px;
+}
+.sneaker-style.active{
+    display: block;
+    margin-top: -10px;
+}
+.sneaker-color{
+    display: none;
+    margin-top: -10px;
+}
+.sneaker-color.active{
+    display: block;
+    margin-top: -10px;
+}
+.secondcontainer { 
+    margin-top: 100px;
+    margin-bottom: -70px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    padding-left: .1rem;
+     
+ }
+}
 /* .man:hover + .sneaker-image{
     display: block;
    }
@@ -213,3 +336,8 @@ h2{
    //!important
 
    //Bohle000@newschool.edu
+
+
+   @media screen and (max-width: 768px) {
+
+   }
