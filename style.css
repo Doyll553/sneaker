@@ -245,7 +245,7 @@ h2{
     max-width: 90%;
 }
 img{
-    margin-top: 10px;;
+    margin-top: 15px;;
 }
 .sneaker-description{
     display: none;
@@ -325,6 +325,21 @@ img{
     padding-left: .1rem;
      
  }
+ .dropdownone:hover .dropdown-content {
+    display: block;
+}
+.dropdowntwo:hover .dropdown-content {
+  display: block;
+}
+.dropdownthree:hover .dropdown-content {
+  display: block;
+}
+.dropdownfour:hover .dropdown-content {
+  display: block;
+}
+.dropdownfive:hover .dropdown-content {
+  display: block;
+}
 }
 /* .man:hover + .sneaker-image{
     display: block;
