@@ -63,11 +63,12 @@ function consoleLogSneakers() {
 function showSneakers() {
   console.log("showSneakers()");
   sneakers.forEach((sneaker) => {
+    console.log(sneakers.fields)
 
 //creating div container
     var sneakerContainer = document.createElement("div");
     sneakerContainer.classList.add("sneaker-container");
-    document.querySelector(".container").append(sneakerContainer);
+    document.querySelector(".sneakerscontainer").append(sneakerContainer);
 
 
     //adding titles
@@ -119,6 +120,7 @@ function showSneakers() {
         }
     })
 
+    
     //add retail price
 
         var sneakerRetail = document.createElement("h2");
@@ -176,6 +178,10 @@ function showSneakers() {
     sneakerColor.classList.add("sneaker-color");
     sneakerColor.innerText = "Colorway: "+ sneaker.fields.color_way;
     sneakerContainer.append(sneakerColor);
+
+    //old to new button
+
+
 
     
 
@@ -253,5 +259,92 @@ function showSneakers() {
     // sneakerDesigner.innertext = sneaker.fields.designer;
     // document.body.append(sneakerDesigner);
   });
+
+
+}
+  
+    var sortOldtoNewButton = document.querySelector('.old_to_new');
+    console.log(sortOldtoNew);
+sortOldtoNewButton.addEventListener("click", function(){
+  console.log("hello");
+    // Clear the container div (remove all the previous elements)
+    const sneakerContainer = document.querySelector(".sneakerscontainer");
+    sneakerContainer.innerHTML = "";
+    // Sort the songs array according to rating from high to low
+    sortOldtoNew();
+    console.log(sneakers);
+    showSneakers();
+});
+
+
+function sortOldtoNew(){
+  sneakers.sort(function(a, b) {
+    // For any two songs in the songs array, compare them by their rating number
+    return new Date(b.fields.release_date) - new Date(a.fields.release_date);
+  });
 }
 
+var sortRetailButton = document.querySelector('.retail');
+console.log(sortRetail);
+sortRetailButton.addEventListener("click", function(){
+console.log("hello");
+// Clear the container div (remove all the previous elements)
+const sneakerContainer = document.querySelector(".sneakerscontainer");
+sneakerContainer.innerHTML = "";
+// Sort the songs array according to rating from high to low
+sortRetail();
+console.log(sneakers);
+showSneakers();
+});
+
+
+function sortRetail(){
+sneakers.sort(function(a, b) {
+// For any two songs in the songs array, compare them by their rating number
+  return b.fields.retail_price - a.fields.retail_price;
+});
+}
+
+var sortResaleButton = document.querySelector('.resale');
+console.log(sortResale);
+sortResaleButton.addEventListener("click", function(){
+console.log("hello");
+// Clear the container div (remove all the previous elements)
+const sneakerContainer = document.querySelector(".sneakerscontainer");
+sneakerContainer.innerHTML = "";
+// Sort the songs array according to rating from high to low
+sortResale();
+console.log(sneakers);
+showSneakers();
+});
+
+
+function sortResale(){
+sneakers.sort(function(a, b) {
+// For any two songs in the songs array, compare them by their rating number
+  return b.fields.current_resell_price - a.fields.current_resell_price;
+});
+}
+
+var sortResetButton = document.querySelector('.reset');
+console.log(sortReset);
+sortResetButton.addEventListener("click", function(){
+console.log("hello");
+// Clear the container div (remove all the previous elements)
+const sneakerContainer = document.querySelector(".sneakerscontainer");
+sneakerContainer.innerHTML = "";
+// Sort the songs array according to rating from high to low
+sortReset();
+console.log(sneakers);
+showSneakers();
+});
+
+
+function sortReset(){
+sneakers.sort(function(a, b) {
+// For any two songs in the songs array, compare them by their rating number
+return b.fields.sneaker_name - a.fields.sneaker_name;
+});
+}
+
+// Return b.fields.price - a.fields.price;
