@@ -18,7 +18,7 @@
     z-index: 1;
   }
 .dropdownone:hover .dropdown-content {
-      display: block;
+    display: block;
 }
 .dropdowntwo:hover .dropdown-content {
     display: block;
@@ -195,7 +195,10 @@ h2{
     color: #0070D8;
 }
 .woman:hover{
-    color: #FF8080;
+    color: #0070D8;
+}
+.box:hover{
+    color: #0070D8;
 }
 .sneaker-title:hover{
     font-family: EditorialNew;
